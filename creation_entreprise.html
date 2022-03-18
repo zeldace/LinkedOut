@@ -40,19 +40,28 @@
                 <div class="manage_firm">
                     <a href="creation_entreprise.html">Manage Firm</a>
                 </div>
+                <div class="manage_offers">
+                  <a href="#">Manage offers</a>
+                </div>
+                <div class="manage_tutors">
+                  <a href="#">Manage tutors</a>
+                </div>
+                <div class="manage_president">
+                  <a href="#">Manage class presidents</a>
+                </div>
                 <div class="manage_student">
                     <a href="#">Manage Student</a>
                 </div>
                 <div class="index">
-                    <a href="index.html">Login</a>
-                </div>             
+                    <a href="#">Manage applications</a>
+                </div>            
             </div>
         </nav>
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
         <form>	    
-          <h1 class="h3 mb-3 fw-normal">Firm registration</h1>
+          <h1 class="h3 mb-3 fw-normal">Firm form</form></h1>
           <div class="form-floating">
             <p><label for="floatingInput">Name</label></p>
             <input type="text" class="form-control" id="floatingInput" placeholder="Name">
@@ -73,8 +82,17 @@
             <label for="floatingInput">Pilot's trust</label>
             <input type="floatingInput" class="form-control" id="floatingInput" placeholder="Pilot's trust">
           </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
-          
+          <div class="action">
+            <div class="add">
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Add</button>
+            </div>
+            <div class="modify">
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Modify</button>
+            </div>
+            <div class="delete">
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Delete</button>
+            </div> 
+          </div>
         </form>
       </main>
       <!--begin footer-->
