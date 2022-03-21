@@ -21,15 +21,12 @@ abstract class Model
     protected function getAll($table, $obj)
     {
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT id, first_name, last_name FROM ' .$table. ' ORDER by id desc;');
+        $req = $this->getBdd()->prepare('SELECT * FROM ' .$table. ' ORDER by id desc;');
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
-            var_dump($data);
             $var[] = new $obj($data);
         }
-        echo '<br>';
-        var_dump($var);
         return $var;
         $req->closeCursor();
     }
