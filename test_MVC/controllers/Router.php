@@ -1,4 +1,7 @@
 <?php
+
+require_once('views/view.php');
+
 class Router
 {
     private $_ctrl;
@@ -10,7 +13,7 @@ class Router
         {
             // CHARGEMENT AUTOMATIQUE DES CLASSES
             spl_autoload_register(function($class){
-                require('models/'.$class.'.php');
+                include('models/'.$class.'.php');
             });
 
             $url = '';
@@ -20,8 +23,8 @@ class Router
                 $url = explode ('/', filter_var ($_GET['url'],FILTER_SANITIZE_URL));
                 
                 $controller = ucfirst(strtolower ($url[0]));
-                $contollerClass = "Controller".$controller;
-                $controllerFile = "controllers/".controllerClass.".php";
+                $controllerClass = "Controller".$controller;
+                $controllerFile = "controllers/".$controllerClass.".php";
                 if(file_exists($controllerFile))
                 {
                     require_once ($controllerFile);
@@ -33,15 +36,16 @@ class Router
             }
             else
             {
-                require_once('controllers/ControllerAccueil.php');
-                $this->_ctrl = new ControllerAccueil ($url);
+                require_once('controllers/ControllerStudent.php');
+                $this->_ctrl = new ControllerStudent ($url);
             }
         }
         // GÉSTION DES ERREURS
         catch (Exception $e)
         {
             $errorMsg = $e->getMessage ();
-            require once ('views/viewError.php');
+            $this->_view = new View('Error');
+            $this->_view->generate(array('errorMsg'=>$errorMsg));
         }
     }
 }
