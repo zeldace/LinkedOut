@@ -18,7 +18,7 @@ abstract class Model
         return self::$_bdd;
     }
 
-    protected function getAll($table, $obj)
+    /*protected function getAll($table, $obj)
     {
         $var = [];
         $req = $this->getBdd()->prepare('SELECT * FROM ' .$table. ' ORDER by id desc;');
@@ -29,6 +29,6 @@ abstract class Model
         }
         return $var;
         $req->closeCursor();
-    }
+    }*/
 }
 ?>
