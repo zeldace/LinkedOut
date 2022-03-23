@@ -3,11 +3,13 @@
 class view
 {
     private $_file;
+    private $_css;
     private $_t;
 
     public function __construct($action)
     {
         $this->_file = 'views/view'.$action.'.php';
+        $this->_css = 'views/'.$action.'.css';
     }
 
 
@@ -33,7 +35,7 @@ class view
 
             require($file);?>
             <style>
-            <?php include 'mystyle3.css'; ?>
+            <?php include $this->_css; ?>
             </style><?php
 
         }

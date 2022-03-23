@@ -40,16 +40,16 @@
   </header>
   <!--begin sign on form-->
   <main class="form-signin">
-    <form>
+    <form action="login" method="POST">
       <h1 class="h3 mb-3 fw-normal">Please log in</h1>
 
       <div class="form-floating">
         <label for="floatingInput">Email address</label>
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input class="form-control" id="floatingInput" placeholder="name@example.com" name='username'>
       </div>
       <div class="form-floating">
         <label for="floatingPassword">Password</label>
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name='password'>
       </div>
 
       <div class="checkbox mb-3">

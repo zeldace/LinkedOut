@@ -22,6 +22,6 @@ class ControllerAccueil
         $this->_view->generate();
     }
 
+    
 }
-
 ?>
