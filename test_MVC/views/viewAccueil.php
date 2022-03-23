@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
   <title>LinkedOut</title>
   <link rel="stylesheet" href="mystyle3.css">
   <link rel="icon" type="image" href="favicon.png">
-  <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="C:\www\projet web\projet web\LinkedOut\test_MVC\assets\vendors\bootstrap\bootstrap-5.1.3-dist\bootstrap-5.1.3-dist\css">
   <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
   <script src="https://kit.fontawesome.com/a03e1e1400.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

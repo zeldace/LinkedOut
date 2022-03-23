@@ -12,7 +12,7 @@ class view
 
 
     //Génére et affiche la vue
-    public function generate($data)
+    public function generate($data=NULL)
     {
         $content = $this->generateFile($this->_file, $data);
 
@@ -27,13 +27,15 @@ class view
     {
         if (file_exists($file))
         {
-            extract($data);
+            if ($data)
+                extract($data);
 
-            ob_start();
 
-            require($file);
+            require($file);?>
+            <style>
+            <?php include 'mystyle3.css'; ?>
+            </style><?php
 
-            return ob_get_clean();
         }
         else
             throw new Exception ('Fichier'.$file.' introuvable');
