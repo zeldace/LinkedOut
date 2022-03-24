@@ -203,6 +203,7 @@
   }
   
   body{
+    height: 100vh;
     background-image: linear-gradient(to left top, #ffffff, #d7d4f8, #ababf0, #7585e9, #0062e1);
   }
   
