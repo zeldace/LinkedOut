@@ -8,13 +8,27 @@ class LoginManager extends Model
 
     public function __construct($username,$password)
     {
-        $this->_username = '"'.$username.'"';
-        $this->_password = '"'.$password.'"';
+        $this->_username =$username;
+        $this->_password =$password;
     }
 
     public function student()
     {
-        $req = $this->getBdd()->prepare('SELECT count(login_student)  FROM student where login_student='.$this->_username.'and password_student='.$this->_password.';');
+        $req = $this->getBdd()->prepare("SELECT count(login_student)  FROM student where login_student= '$this->_username' and password_student= '$this->_password' ;");
+        $req->execute();
+        return $req->fetch();
+    }
+
+    public function pilot()
+    {
+        $req = $this->getBdd()->prepare("SELECT count(login_pilot)  FROM pilot where login_pilot= '$this->_username' and password_pilot= '$this->_password' ;");
+        $req->execute();
+        return $req->fetch();
+    }
+
+    public function admin()
+    {
+        $req = $this->getBdd()->prepare("SELECT count(login_admin)  FROM administrator where login_admin= '$this->_username' and password_admin= '$this->_password' ;");
         $req->execute();
         return $req->fetch();
     }
