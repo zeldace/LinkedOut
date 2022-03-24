@@ -154,6 +154,7 @@ opacity:0.6;
 }
 
 body{
+  height: 100vh;
 background-image: linear-gradient(to right bottom, #ff8500, #ff4e55, #ff2c96, #bd4acf, #1267eb);
 }
 
