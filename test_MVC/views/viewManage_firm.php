@@ -80,16 +80,15 @@
             <label for="floatingInput">Pilot's trust</label>
             <input type="floatingInput" class="form-control" id="floatingInput" placeholder="Pilot's trust">
           </div>
+          <select>
+            <option>Add</option>
+            <option>Modify</option>
+            <option>Delete</option>
+          </select>
           <div class="action">
             <div class="add">
-              <input action='Add_firm' class="w-100 btn btn-lg btn-primary" type="submit">Add</button>
+              <input action='Add_firm' class="w-100 btn btn-lg btn-primary" type="submit">
             </div>
-            <div class="modify">
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Modify</button>
-            </div>
-            <div class="delete">
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Delete</button>
-            </div> 
           </div>
         </form>
       </main>
