@@ -58,7 +58,7 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-        <form>	    
+        <form method=POST>	    
           <h1 class="h3 mb-3 fw-normal">Manage firms</form></h1>
           <div class="form-floating">
             <p><label for="floatingInput">Name</label></p>
@@ -82,7 +82,7 @@
           </div>
           <div class="action">
             <div class="add">
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Add</button>
+              <input action='Add_firm' class="w-100 btn btn-lg btn-primary" type="submit">Add</button>
             </div>
             <div class="modify">
               <button class="w-100 btn btn-lg btn-primary" type="submit">Modify</button>
