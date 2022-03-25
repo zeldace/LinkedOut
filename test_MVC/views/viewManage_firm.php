@@ -58,36 +58,36 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-        <form method=POST>	    
-          <h1 class="h3 mb-3 fw-normal">Manage firms</form></h1>
+        <form action="ManageFirmRedirect" method="POST">
+          <h1 class="h3 mb-3 fw-normal">Manage firms</h1>
           <div class="form-floating">
             <p><label for="floatingInput">Name</label></p>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Name" name='Name'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Buisness sector</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Buisness sector">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Buisness sector" name='Sector'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Locality</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Locality">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Locality" name='locality'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Number of trainees</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Number of trainees">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Number of trainees" name='InternNumber'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Pilot's trust</label>
-            <input type="floatingInput" class="form-control" id="floatingInput" placeholder="Pilot's trust">
+            <input type="floatingInput" class="form-control" id="floatingInput" placeholder="Pilot's trust" name='PilotTrust'>
           </div>
-          <select>
+          <select name='select'>
             <option>Add</option>
             <option>Modify</option>
             <option>Delete</option>
           </select>
           <div class="action">
             <div class="add">
-              <input action='Add_firm' class="w-100 btn btn-lg btn-primary" type="submit">
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
             </div>
           </div>
         </form>

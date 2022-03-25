@@ -2,15 +2,10 @@
 
 Class CompanyManager extends Model
 {
-    public function getCompanies()
-    {
-        return $this->getAll(/*'student', 'Student'*/);
-    }
-
-    public function getAll()
+    public function GetCompanies()
     {
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT *  FROM Company NATURAL JOIN reside NATURAL JOIN address NATURAL JOIN city;');
+        $req = $this->GetBdd()->prepare('SELECT *  FROM Company NATURAL JOIN address;');
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
@@ -18,5 +13,11 @@ Class CompanyManager extends Model
         }
         return $var;
         $req->closeCursor();
+    }
+
+
+    public function AddCompany()
+    {
+        
     }
 }

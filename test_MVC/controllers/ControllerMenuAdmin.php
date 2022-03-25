@@ -2,7 +2,7 @@
 
 require_once('views/View.php');
 
-class ControllerMenu_admin
+class ControllerMenuAdmin
 {
     private $_view;
 

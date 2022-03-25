@@ -2,64 +2,115 @@
 
 class company
 {
-    private $_name;
-    private $_intern_number;
-    private $_sector;
-    /*private array $_street_name;
-    private array $_street_number;
-    private array $_city;
-    private array $_postal_code;*/
+    private $Name;
+    private $InternNumber;
+    private $Sector;
+    private $PilotTrust;
+    private $StreetName;
+    private $StreetNumber;
+    private $City;
+    private $PostalCode;
+
+    
     //CONSTRUCTEUR 
     public function __construct(array $data)
     {
-        $this->hydrate($data);
+        $this->Hydrate($data);
     }
 
 
     //HYDRATATION
-    public function hydrate(array $data)
+    public function Hydrate(array $data)
     {
         foreach($data as $key => $value)
         {
-            $method = 'set'.$key;
-            
+            $method = 'Set'.$key;
 
             if (method_exists($this, $method))
+            {
                 $this->$method($value);
+            }
         }
     }
 
-    public function setname($name)
+    public function SetName($name)
     {
-        if (is_string($name))
-            $this->_name = $name;
+        $this->Name = $name;
     }
 
-    public function name()
+    public function Name()
     {
-        return $this->_name;
+        return $this->Name;
     }
 
 
-    public function setintern_number($intern_number)
+    public function SetInternNumber($InternNumber)
     {
-        $intern_number= (int) $intern_number;
-        if ($intern_number>0)
-            $this->_intern_number = $intern_number;
+        $this->InternNumber = $InternNumber;
     }
 
-    public function intern_number()
+    public function InternNumber()
     {
-        return $this->_intern_number;
+        return $this->InternNumber;
     }
 
-    public function setstreet_name($street_name)
+    public function SetStreetName($streetName)
     {
-        $this->_street_name = $street_name;
+        $this->StreetName = $streetName;
     }
 
-    public function street_name()
+    public function StreetName()
     {
-        return $this->_street_name;
+        return $this->StreetName;
+    }
+
+    public function Sector()
+    {
+        return $this->Sector;
+    }
+
+    public function SetSector($sector)
+    {
+        $this->Sector = $sector;
+    }
+
+    public function PilotTrust()
+    {
+        return $this->PilotTrust;
+    }
+
+    public function SetPilotTrust($pilotTrust)
+    {
+        $this->PilotTrust = $pilotTrust;
+    }
+
+    public function StreetNumber()
+    {
+        return $this->StreetNumber;
+    }
+
+    public function SetStreetNumber($streetNumber)
+    {
+        $this->StreetNumber = $streetNumber;
+    }
+
+    public function City()
+    {
+        return $this->City;
+    }
+
+    public function SetCity($city)
+    {
+        $this->City = $city;
+    }
+
+    public function PostalCode()
+    {
+        return $this->PostalCode;
+    }
+
+    public function SetPostalCode($postalCode)
+    {
+        $this->PostalCode = $postalCode;
     }
 }

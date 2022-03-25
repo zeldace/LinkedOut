@@ -3,32 +3,32 @@
 
 class LoginManager extends Model
 {
-    private $_username;
-    private $_password;
+    private $Username;
+    private $Password;
 
     public function __construct($username,$password)
     {
-        $this->_username =$username;
-        $this->_password =$password;
+        $this->Username =$username;
+        $this->Password =$password;
     }
 
-    public function student()
+    public function Student()
     {
-        $req = $this->getBdd()->prepare("SELECT count(login_student)  FROM student where login_student= '$this->_username' and password_student= '$this->_password' ;");
+        $req = $this->GetBdd()->prepare("SELECT count(LoginStudent)  FROM Student where LoginStudent= '$this->Username' and passwordStudent= '$this->Password' ;");
         $req->execute();
         return $req->fetch();
     }
 
-    public function pilot()
+    public function Pilot()
     {
-        $req = $this->getBdd()->prepare("SELECT count(login_pilot)  FROM pilot where login_pilot= '$this->_username' and password_pilot= '$this->_password' ;");
+        $req = $this->GetBdd()->prepare("SELECT count(LoginPilot)  FROM Pilot where LoginPilot= '$this->Username' and passwordPilot= '$this->Password' ;");
         $req->execute();
         return $req->fetch();
     }
 
-    public function admin()
+    public function Admin()
     {
-        $req = $this->getBdd()->prepare("SELECT count(login_admin)  FROM administrator where login_admin= '$this->_username' and password_admin= '$this->_password' ;");
+        $req = $this->GetBdd()->prepare("SELECT count(LoginAdmin)  FROM Administrator where LoginAdmin= '$this->Username' and passwordAdmin= '$this->Password' ;");
         $req->execute();
         return $req->fetch();
     }

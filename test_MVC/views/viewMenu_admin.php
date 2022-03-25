@@ -58,7 +58,7 @@ if ($_SESSION['status']!='admin')
           <div class="action">
             <div class="col1">
               <div class="manage_firm">
-                <a href="manage_firm" class="w-100 btn btn-lg btn-primary">Manage Firm</a>
+                <a href="manageFirm" class="w-100 btn btn-lg btn-primary">Manage Firm</a>
               </div>
               <div class="manage_offers">
                 <a href="manage_offers" class="w-100 btn btn-lg btn-primary">Manage Offers</a>
