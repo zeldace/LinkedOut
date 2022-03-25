@@ -1,0 +1,17 @@
+{
+    "name": "LinkedOut",
+    "short_name": "LinOut",
+    "start_url": "/viewAccueil.php",
+    "display": "standalone",
+    "background-color": "#FFFF",
+    "theme_color" : "#03a9f4",
+    "orientation": "portrait-primary",
+    "icons": [
+    {
+
+        "src": "./img/logo.png",
+        "type": "image/png",
+        "sizes": "72x72"
+    }
+    ]
+}
