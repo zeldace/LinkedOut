@@ -24,6 +24,7 @@ class ControllerStudent
         $this->_view = new View('Student');
         $this->_view->generate(array('students'=>$students));
     }
+    
 
 }
 

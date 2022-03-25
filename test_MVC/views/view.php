@@ -32,12 +32,12 @@ class view
             if ($data)
                 extract($data);
 
-
+            ob_start();
             require($file);?>
             <style>
             <?php include $this->_css; ?>
             </style><?php
-
+            return ob_get_clean();
         }
         else
             throw new Exception ('Fichier'.$file.' introuvable');

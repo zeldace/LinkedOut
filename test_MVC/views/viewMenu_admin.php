@@ -1,3 +1,11 @@
+<?php
+Session_start();
+if ($_SESSION['status']!='admin')
+{
+  header('Location: unconnected');
+}
+?>
+
 <!doctype html> 
 <html lang="en"> 
    <head> 
@@ -32,7 +40,7 @@
       <nav>
           <div class="nav">
               <div class="disconnect">
-                  <a href="Test Formulaire Etudiant.html">Disconnect</a>
+                  <a href="accueil">Disconnect</a>
               </div>
                          
           </div>
@@ -50,21 +58,21 @@
           <div class="action">
             <div class="col1">
               <div class="manage_firm">
-                <a href="creation_entreprise.html" class="w-100 btn btn-lg btn-primary">Manage Firm</a>
+                <a href="manage_firm" class="w-100 btn btn-lg btn-primary">Manage Firm</a>
               </div>
               <div class="manage_offers">
-                <a href="form_offers.html" class="w-100 btn btn-lg btn-primary">Manage Offers</a>
+                <a href="manage_offers" class="w-100 btn btn-lg btn-primary">Manage Offers</a>
               </div> 
             </div>
             <div class="col2">
               <div class="manage_tutors">
-                <a href="form_tutors.html" class="w-100 btn btn-lg btn-primary">Manage Tutors</a>
+                <a href="manage_tutors" class="w-100 btn btn-lg btn-primary">Manage Tutors</a>
               </div>
               <div class="manage_president">
-                <a href="form_classpr.html" class="w-100 btn btn-lg btn-primary">Manage Class Presidents</a>
+                <a href="manage_president" class="w-100 btn btn-lg btn-primary">Manage Class Presidents</a>
               </div>
               <div class="manage_student">
-                <a href="Test Formulaire Etudiant.html" class="w-100 btn btn-lg btn-primary" >Manage Student</a>
+                <a href="manage_student" class="w-100 btn btn-lg btn-primary" >Manage Student</a>
               </div> 
               </div>
             </div>

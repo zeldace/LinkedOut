@@ -5,26 +5,39 @@ require_once('views/View.php');
 class ControllerLogin
 {
     private $_login;
-    private $_username;
     private $_view;
-    private $_password;
 
     public function __construct($url){
         
-        
-
-        $this->_login = new LoginManager($_POST['username']);
-        $this->_password = $_POST['password'];
-        $password = $this->_login->student();
-        echo $password[0];
-        if ($this->_password==$password[0]){
+        $this->_login = new LoginManager($_POST['username'], $_POST['password']);
+        $access=$this->_login->student();
+        if ($access[0]>=1){
+            session_start();
+            $_SESSION['username']=$_POST['username'];
+            $_SESSION['status']='student';
             header('Location: student');
-            echo 'oui';
-    }
-    else{
-        header('ControllerAccueil.php');
-        echo 'non';
-    }
+        }
+        else{
+           $access = $this->_login->pilot();
+           if ($access[0]>=1){
+            session_start();
+            $_SESSION['username']=$_POST['username'];
+            $_SESSION['status']='pilot';
+           }
+           else{
+                $access = $this->_login->admin();
+                if ($access[0]>=1){
+                    session_start();
+                    $_SESSION['username']=$_POST['username'];
+                    $_SESSION['status']='admin';
+                    header('Location:menu_admin');
+                    
+                }
+                else{
+                    header('Location: accueil');
+                }
+            }
+        }
     }
 }
 
