@@ -58,10 +58,6 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-<<<<<<< HEAD
-    <main class="form-signin">
-=======
->>>>>>> 68643bf2639368f9491bd55f748f67a1cbfac28f
       <table>
         <thead align="left" style="display :table-header-group">
           <tr>
@@ -92,7 +88,6 @@
             <?php endforeach;?>
         </tbody>
       </table>
-    </main>
     </main>
       <!--begin footer-->
       <div class="footer-clean">
