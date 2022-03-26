@@ -38,7 +38,7 @@
                     <a href="menu_admin.html">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="creation_entreprise.html">Manage Firm</a>
+                    <a href="TestManageFirm">Manage Firm</a>
                 </div>
                 <div class="manage_offers">
                   <a href="form_offers.html">Manage offers</a>
@@ -50,7 +50,7 @@
                   <a href="form_classpr.html">Manage class presidents</a>
                 </div>
                 <div class="manage_student">
-                    <a href="Test Formulaire Etudiant.html">Manage Student</a>
+                    <a href="Student">Manage Student</a>
                 </div>
                            
             </div>

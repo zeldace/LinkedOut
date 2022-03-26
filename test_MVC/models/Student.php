@@ -1,7 +1,7 @@
 <?php
 class Student 
 {
-    private $_id;
+    private $Id;
     private $_firstName;
     private $_lastName;
     private $_promotion;
@@ -33,46 +33,46 @@ class Student
     }
 
     //SETTERS
-    public function setid_student($id)
+    public function setIdStudent($Id)
     {
-        $id= (int) $id;
-        if ($id>0)
-            $this->_id = $id;
+        $Id= (int) $Id;
+        if ($Id>0)
+            $this->Id = $Id;
     }
 
 
-    public function setfirst_name_student($firstName)
+    public function setFirstNameStudent($firstName)
     {
         if (is_string($firstName))
             $this->_firstName = $firstName;
     }
 
 
-    public function setlast_name_student($lastName)
+    public function setLastNameStudent($lastName)
     {
         if(is_string($lastName))
             $this->_lastName = $lastName;
     }
 
-    public function setpostal_code($postal_code)
+    public function setPostalCode($postal_code)
     {
         if (is_string($postal_code))
             $this->_postal_code = $postal_code;
     }
     
-    public function setcity($city)
+    public function setCity($city)
     {
         if (is_string($city))
             $this->_city = $city;
     }
 
-    public function setstreet_number($street_number)
+    public function setStreetNumber($street_number)
     {
         if (is_string($street_number))
             $this->_street_number = $street_number;
     }
 
-    public function setstreet_name($street_name)
+    public function setStreetName($street_name)
     {
         if (is_string($street_name))
             $this->_street_name = $street_name;
@@ -95,47 +95,47 @@ class Student
 
 
     //Getters
-    public function id()
+    public function Id()
     {
         return $this->_id;
     }
 
-    public function first_name()
+    public function FirstName()
     {
         return (string)$this->_firstName;
     }
 
-    public function last_name()
+    public function LastName()
     {
         return (string)$this->_lastName;
     }
 
-    public function promotion()
+    public function Promotion()
     {
         return (string)$this->_promotion;
     }
 
-    public function subject()
+    public function Subject()
     {
         return (string)$this->_subject;
     }
 
-    public function street_name()
+    public function StreetName()
     {
         return (string)$this->_street_name;
     }
 
-    public function street_number()
+    public function StreetNumber()
     {
         return (string)$this->_street_number;
     }
 
-    public function city()
+    public function City()
     {
         return (string)$this->_city;
     }
 
-    public function postal_code()
+    public function PostalCode()
     {
         return (string)$this->_postal_code;
     }
