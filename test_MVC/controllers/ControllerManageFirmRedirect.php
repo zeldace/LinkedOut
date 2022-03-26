@@ -27,6 +27,7 @@ class ControllerManageFirmRedirect
 
         $this->FirmManager->$function($this->Firm);
 
+        header('Location: ManageFirm');
         
     }
 }

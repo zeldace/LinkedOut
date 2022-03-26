@@ -2,14 +2,14 @@
 
 class company
 {
-    private $Name;
-    private $InternNumber;
-    private $Sector;
-    private $PilotTrust;
-    private $StreetName;
-    private $StreetNumber;
-    private $City;
-    private $PostalCode;
+    private $name;
+    private $internNumber;
+    private $sector;
+    private $pilotTrust;
+    private $streetName;
+    private $streetNumber;
+    private $city;
+    private $postalCode;
 
     
     //CONSTRUCTEUR 
@@ -35,82 +35,82 @@ class company
 
     public function SetName($name)
     {
-        $this->Name = $name;
+        $this->name = $name;
     }
 
     public function Name()
     {
-        return $this->Name;
+        return $this->name;
     }
 
 
-    public function SetInternNumber($InternNumber)
+    public function SetInternNumber($internNumber)
     {
-        $this->InternNumber = $InternNumber;
+        $this->internNumber = (int)$internNumber;
     }
 
     public function InternNumber()
     {
-        return $this->InternNumber;
+        return $this->internNumber;
     }
 
     public function SetStreetName($streetName)
     {
-        $this->StreetName = $streetName;
+        $this->streetName = $streetName;
     }
 
     public function StreetName()
     {
-        return $this->StreetName;
+        return $this->streetName;
     }
 
     public function Sector()
     {
-        return $this->Sector;
+        return $this->sector;
     }
 
     public function SetSector($sector)
     {
-        $this->Sector = $sector;
+        $this->sector = $sector;
     }
 
     public function PilotTrust()
     {
-        return $this->PilotTrust;
+        return $this->pilotTrust;
     }
 
     public function SetPilotTrust($pilotTrust)
     {
-        $this->PilotTrust = $pilotTrust;
+        $this->pilotTrust = (int)$pilotTrust;
     }
 
     public function StreetNumber()
     {
-        return $this->StreetNumber;
+        return $this->streetNumber;
     }
 
     public function SetStreetNumber($streetNumber)
     {
-        $this->StreetNumber = $streetNumber;
+        $this->streetNumber = $streetNumber;
     }
 
     public function City()
     {
-        return $this->City;
+        return $this->city;
     }
 
     public function SetCity($city)
     {
-        $this->City = $city;
+        $this->city = $city;
     }
 
     public function PostalCode()
     {
-        return $this->PostalCode;
+        return $this->postalCode;
     }
 
     public function SetPostalCode($postalCode)
     {
-        $this->PostalCode = $postalCode;
+        $this->postalCode = $postalCode;
     }
 }

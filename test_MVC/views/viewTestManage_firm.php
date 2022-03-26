@@ -58,52 +58,20 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-        <form action="ManageFirmRedirect" method="POST">
-          <h1 class="h3 mb-3 fw-normal">Manage firms</h1>
-          <div class="form-floating">
-            <p><label for="floatingInput">Name</label></p>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Name" name='Name'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">Buisness sector</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Buisness sector" name='Sector'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">StreetName</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="StreetName" name='StreetName'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">StreetNumber</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="StreetNumber" name='StreetNumber'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">City</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="City" name='City'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">PostalCode</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="PostalCode" name='PostalCode'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">Number of trainees</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Number of trainees" name='InternNumber'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">Pilot's trust</label>
-            <input type="floatingInput" class="form-control" id="floatingInput" placeholder="Pilot's trust" name='PilotTrust'>
-          </div>
-          <select name='select'>
-            <option>Add</option>
-            <option>Modify</option>
-            <option>Delete</option>
-          </select>
-          <div class="action">
-            <div class="add">
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
-            </div>
-          </div>
-        </form>
-      </main>
+        <?php
+          foreach($companies as $company){
+            echo $company->Name();
+            echo $company->InternNumber();
+            echo $company->Sector();
+            echo $company->PilotTrust();
+            echo $company->StreetName();
+            echo $company->StreetNumber();
+            echo $company->City();
+            echo $company->PostalCode();
+            echo '</br>';
+          }
+        ?>
+    </main>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
