@@ -20,6 +20,7 @@ class Router
             // LE CONTROLLER EST INCLUS SELON L'ACTION DE L'UTILISATEUR
             if(isset($_GET['url']))
             {
+                
                 $url = explode ('/', filter_var ($_GET['url'],FILTER_SANITIZE_URL));
                 
                 $controller = ucfirst(strtolower ($url[0]));
