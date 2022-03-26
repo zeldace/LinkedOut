@@ -43,4 +43,19 @@ Class CompanyManager extends Model
         return $var;
         $req->closeCursor();
     }
+
+    public function UpdateCompany($Company)
+    {
+        $req =$this->GetBdd()->prepare("Update (Company LEFT Join Address on Company.IdCompany=Address.IdAddress) SET 
+                                        Name='".$Company->Name()."',
+                                        InternNumber='".$Company->InternNumber()."',
+                                        Sector='".$Company->Sector()."',
+                                        PilotTrust='".$Company->PilotTrust()."',
+                                        StreetName='".$Company->StreetName()."',
+                                        StreetNumber='".$Company->StreetNumber()."',
+                                        City='".$Company->City()."',
+                                        PostalCode='".$Company->PostalCode()."',
+                                        where company.IdCompany=".$Company->IdCompany().";");
+        $req->execute();
+    }
 }

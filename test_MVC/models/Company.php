@@ -10,6 +10,7 @@ class company
     private $streetNumber;
     private $city;
     private $postalCode;
+    private $IdCompany;
 
     
     //CONSTRUCTEUR 
@@ -112,5 +113,15 @@ class company
     public function SetPostalCode($postalCode)
     {
         $this->postalCode = $postalCode;
+    }
+
+    public function IdCompany()
+    {
+        return $this->IdCompany;
+    }
+
+    public function SetIdCompany($IdCompany)
+    {
+        $this->IdCompany = $IdCompany;
     }
 }
