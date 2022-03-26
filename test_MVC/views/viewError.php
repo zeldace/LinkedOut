@@ -41,7 +41,7 @@
   <!--begin sign on form-->
   <main class="form-signin">
     <form action="accueil" method="POST">
-      <h1 class="h3 mb-3 fw-normal">This page does not exist</h1>
+      <h1 class="h3 mb-3 fw-normal"><?=$errorMsg ?></h1>
 
       <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
 

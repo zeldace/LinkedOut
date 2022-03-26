@@ -1,9 +1,11 @@
 <?php
 
-class ControllerUpdateCompany
+require_once('views/View.php');
+
+class ControllerFormUpdateCompany
 {
     private $CompanyManager;
-    private $Company;
+    private $View;
 
     public function __construct($url)
     {
@@ -17,10 +19,10 @@ class ControllerUpdateCompany
     private function companies($url)
     {
         $this->CompanyManager = new CompanyManager();
-        $this->Company = new Company($_POST[]);
-        $companies = $this->CompanyManager->UpdateCompany($url[1],$Company);
-        
-        header('Location: TestManageFirm');
+        $companies = $this->CompanyManager->getCompany($url[1]);
+
+        $this->View = new View('UpdateCompany');
+        $this->View->generate(array('company'=>$companies));
     }
 
 }
