@@ -69,6 +69,7 @@
             <th>StreetNumber</th>
             <th>City</th>
             <th>PostalCode</th>
+            <th colspan="2">Edit</th>
           </tr>
         </thead>
         <tbody>
@@ -83,6 +84,8 @@
               <td><?php echo $company->StreetNumber();?></td>
               <td><?php echo $company->City();?></td>
               <td><?php echo $company->PostalCode();?></td>
+              <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Modify</button></td>
+              <td><!--Delete--><button class="w-100 btn btn-lg btn-primary" type="submit">Delete</button></td>
               <td><?php echo '</br>';?></td>
             </tr>
             <?php endforeach;?>
