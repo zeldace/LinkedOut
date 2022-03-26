@@ -58,19 +58,35 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-        <?php
-          foreach($companies as $company){
-            echo $company->Name();
-            echo $company->InternNumber();
-            echo $company->Sector();
-            echo $company->PilotTrust();
-            echo $company->StreetName();
-            echo $company->StreetNumber();
-            echo $company->City();
-            echo $company->PostalCode();
-            echo '</br>';
-          }
-        ?>
+      <table>
+        <thead align="left" style="display :table-header-group">
+          <tr>
+            <th>Nom</th>
+            <th>InternNumber</th>
+            <th>Sector</th>
+            <th>PilotTrust</th>
+            <th>StreetName</th>
+            <th>StreetNumber</th>
+            <th>City</th>
+            <th>PostalCode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            foreach($companies as $company){
+              echo $company->Name();
+              echo $company->InternNumber();
+              echo $company->Sector();
+              echo $company->PilotTrust();
+              echo $company->StreetName();
+              echo $company->StreetNumber();
+              echo $company->City();
+              echo $company->PostalCode();
+              echo '</br>';
+            }
+          ?>
+        </tbody>  
+      </table>
     </main>
       <!--begin footer-->
       <div class="footer-clean">
