@@ -58,39 +58,47 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-    <main class="form-signin">
-      <table>
-        <thead align="left" style="display :table-header-group">
-          <tr>
-            <th>Nom</th>
-            <th>InternNumber</th>
-            <th>Sector</th>
-            <th>PilotTrust</th>
-            <th>StreetName</th>
-            <th>StreetNumber</th>
-            <th>City</th>
-            <th>PostalCode</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-            foreach($companies as $company):?>
-            <tr>
-              <td><?php echo $company->Name();?></td>
-              <td><?php echo $company->InternNumber();?></td>
-              <td><?php echo $company->Sector();?></td>
-              <td><?php echo $company->PilotTrust();?></td>
-              <td><?php echo $company->StreetName();?></td>
-              <td><?php echo $company->StreetNumber();?></td>
-              <td><?php echo $company->City();?></td>
-              <td><?php echo $company->PostalCode();?></td>
-              <td><?php echo '</br>';?></td>
-            </tr>
-            <?php endforeach;?>
-        </tbody>
-      </table>
-    </main>
-    </main>
+        <form action="ManageFirmRedirect" method="POST">
+          <h1 class="h3 mb-3 fw-normal">Manage firms</h1>
+          <div class="form-floating">
+            <p><label for="floatingInput">Name</label></p>
+            <input type="text" class="form-control" id="floatingInput" value=<?=$company->Name()?> name='Name'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Buisness sector</label>
+            <input type="text" class="form-control" id="floatingInput" value=<?=$company->Sector()?> name='Sector'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">StreetName</label>
+            <input type="text" class="form-control" id="floatingInput" value=<?=$company->StreetName()?> name='StreetName'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">StreetNumber</label>
+            <input type="text" class="form-control" id="floatingInput" value=<?=$company->StreetNumber()?> name='StreetNumber'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">City</label>
+            <input type="text" class="form-control" id="floatingInput" value=<?=$company->City()?> name='City'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">PostalCode</label>
+            <input type="text" class="form-control" id="floatingInput" value=<?=$company->PostalCode()?> name='PostalCode'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Number of trainees</label>
+            <input type="text" class="form-control" id="floatingInput" value=<?=$company->InternNumber()?> name='InternNumber'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Pilot's trust</label>
+            <input type="floatingInput" class="form-control" id="floatingInput" value=<?=$company->PilotTrust()?> name='PilotTrust'>
+          </div>
+          <div class="action">
+            <div class="add">
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </main>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>

@@ -33,4 +33,14 @@ Class CompanyManager extends Model
                 ".$this->GetBdd()->lastInsertId().")");
         $req->execute();
     }
+
+    public function GetCompany($id)
+    {
+        $var = [];
+        $req = $this->GetBdd()->prepare("SELECT *  FROM Company NATURAL JOIN address where IdCompany=$id;");
+        $req->execute();
+        $var = new company($req->fetch(PDO::FETCH_ASSOC));
+        return $var;
+        $req->closeCursor();
+    }
 }
