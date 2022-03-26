@@ -89,7 +89,6 @@
         </tbody>
       </table>
     </main>
-    </main>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
