@@ -23,7 +23,7 @@ class Router
                 
                 $url = explode ('/', filter_var ($_GET['url'],FILTER_SANITIZE_URL));
                 
-                $controller = ucfirst(strtolower ($url[0]));
+                $controller = ucfirst($url[0]);
                 $controllerClass = "Controller".$controller;
                 $controllerFile = "controllers/".$controllerClass.".php";
                 if(file_exists($controllerFile))

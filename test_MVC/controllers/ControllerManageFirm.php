@@ -2,14 +2,14 @@
 
 require_once('views/View.php');
 
-class ControllerManage_firm
+class ControllerManageFirm
 {
     private $_companyManager;
     private $_view;
 
     public function __construct($url)
     {
-        if(isset($url) && count((is_countable($url)?$url:[])) > 2) //à modifier pour s'adapter à la pagination
+        if(isset($url) && count((is_countable($url)?$url:[])) > 1) //à modifier pour s'adapter à la pagination
         {
             throw new Exception('Page introuvable');
         }

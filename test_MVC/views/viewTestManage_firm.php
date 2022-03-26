@@ -1,17 +1,9 @@
-<?php
-Session_start();
-if ($_SESSION['status']!='admin')
-{
-  header('Location: unconnected');
-}
-?>
-
 <!doctype html> 
 <html lang="en"> 
    <head> 
       <meta charset="utf-8"> 
       <title>LinkedOut</title>
-      <link rel="stylesheet" href="menu_admin.css">
+      <link rel="stylesheet" href="creation_entreprise.css">
       <link rel="icon" type="image" href="favicon.png">
       <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
@@ -37,47 +29,49 @@ if ($_SESSION['status']!='admin')
 
    <body>
     <header>
-      <nav>
-          <div class="nav">
-              <div class="disconnect">
-                  <a href="accueil">Disconnect</a>
-              </div>
-                         
-          </div>
-      </nav>
-  </header>
+        <nav>
+            <div class="nav">
+                <div class="icone">
+                <i class="fa-solid fa-business-time"></i>
+                </div>
+                <div class="label">
+                    <a href="menu_admin.html">Menu</a>
+                </div>
+                <div class="manage_firm">
+                    <a href="creation_entreprise.html">Manage Firm</a>
+                </div>
+                <div class="manage_offers">
+                  <a href="form_offers.html">Manage offers</a>
+                </div>
+                <div class="manage_tutors">
+                  <a href="form_tutors.html">Manage tutors</a>
+                </div>
+                <div class="manage_president">
+                  <a href="form_classpr.html">Manage class presidents</a>
+                </div>
+                <div class="manage_student">
+                    <a href="Test Formulaire Etudiant.html">Manage Student</a>
+                </div>
+                           
+            </div>
+        </nav>
+    </header>
     <!--begin sign on form-->
-    <div class ="title">
-      <h2>
-       Menu
-      </h2>
-    </div>
     <main class="form-signin">
-      
-        <form>	    
-          <div class="action">
-            <div class="col1">
-              <div class="manage_firm">
-                <a href="manageFirm" class="w-100 btn btn-lg btn-primary">Manage Firm</a>
-              </div>
-              <div class="manage_offers">
-                <a href="manage_offers" class="w-100 btn btn-lg btn-primary">Manage Offers</a>
-              </div> 
-            </div>
-            <div class="col2">
-              <div class="manage_tutors">
-                <a href="manage_tutors" class="w-100 btn btn-lg btn-primary">Manage Tutors</a>
-              </div>
-              <div class="manage_president">
-                <a href="manage_president" class="w-100 btn btn-lg btn-primary">Manage Class Presidents</a>
-              </div>
-              <div class="manage_student">
-                <a href="manage_student" class="w-100 btn btn-lg btn-primary" >Manage Student</a>
-              </div> 
-              </div>
-            </div>
-        </form>
-      </main>
+        <?php
+          foreach($companies as $company){
+            echo $company->Name();
+            echo $company->InternNumber();
+            echo $company->Sector();
+            echo $company->PilotTrust();
+            echo $company->StreetName();
+            echo $company->StreetNumber();
+            echo $company->City();
+            echo $company->PostalCode();
+            echo '</br>';
+          }
+        ?>
+    </main>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
@@ -108,7 +102,7 @@ if ($_SESSION['status']!='admin')
                         </ul>
                     </div>
                     <div class="col-lg-3 item social"><a href="#"><i class="fa-brands fa-facebook-f"></i></i></a><a href="#"><i class="fa-brands fa-twitter"></i></i></a><a href="#"><i class="fa-brands fa-snapchat"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <p class="copyright">LinkedOut Â© 2022</p>
+                        <p class="copyright">LinkedOut © 2022</p>
                     </div>
                 </div>
             </div>

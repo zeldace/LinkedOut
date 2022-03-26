@@ -4,22 +4,22 @@ require_once('views/View.php');
 
 class ControllerAccueil
 {
-    private $_view;
+    private $View;
 
     public function __construct($url)
     {
-        if(isset($url) && count((is_countable($url)?$url:[])) > 1) //à modifier pour s'adapter à la pagination
+        if(isset($url) && count((is_countable($url) ? $url : [])) > 1) //à modifier pour s'adapter à la pagination
         {
             throw new Exception('Page introuvable');
         }
         else
-            $this->accueil();
+            $this->Accueil();
     }
-    private function accueil()
+    private function Accueil()
     {
 
-        $this->_view = new View('Accueil');
-        $this->_view->generate();
+        $this->View = new View('Accueil');
+        $this->View->generate();
     }
 
     

@@ -11,7 +11,7 @@ abstract class Model
     }
 
     //RECUPER LA CONNEXION A LA BDD
-    protected function getBdd()
+    protected function GetBdd()
     {
         if(self::$_bdd == null)
             self::setBdd();
