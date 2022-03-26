@@ -6,7 +6,7 @@ abstract class Model
     //INSTANCIE LA CONNEXION A LA BDD
     private static function setBdd ()
     {
-        self::$_bdd = new PDO ('mysql:host=localhost;dbname=projet_web', 'root', '5zrkUEV7');
+        self::$_bdd = new PDO ('mysql:host=localhost;dbname=projet_web', 'root', 'mdp');
         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
 
