@@ -58,7 +58,7 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-        <form action="ManageFirmRedirect" method="POST">
+        <form action="../UpdateCompany" method="POST">
           <h1 class="h3 mb-3 fw-normal">Manage firms</h1>
           <div class="form-floating">
             <p><label for="floatingInput">Name</label></p>
@@ -92,6 +92,8 @@
             <label for="floatingInput">Pilot's trust</label>
             <input type="floatingInput" class="form-control" id="floatingInput" value=<?=$company->PilotTrust()?> name='PilotTrust'>
           </div>
+          <?php var_dump($_GET['url'][0]);?>
+          <input type="hidden" class="form-control" id="floatingInput" value=<?=$_GET['url'][1]?> name='IdCompany'>
           <div class="action">
             <div class="add">
             <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
