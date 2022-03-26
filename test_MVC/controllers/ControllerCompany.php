@@ -4,8 +4,8 @@ require_once('views/View.php');
 
 class ControllerCompany
 {
-    private $_companyManager;
-    private $_view;
+    private $CompanyManager;
+    private $View;
 
     public function __construct($url)
     {
@@ -18,11 +18,11 @@ class ControllerCompany
     }
     private function companies()
     {
-        $this->_companyManager = new CompanyManager();
-        $companies = $this->_companyManager->getCompanies();
+        $this->CompanyManager = new CompanyManager();
+        $companies = $this->CompanyManager->getCompanies();
 
-        $this->_view = new View('Company');
-        $this->_view->generate(array('companies'=>$companies));
+        $this->View = new View('Company');
+        $this->View->generate(array('companies'=>$companies));
     }
 
 }
