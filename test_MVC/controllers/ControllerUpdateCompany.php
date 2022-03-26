@@ -10,8 +10,7 @@ class ControllerUpdateCompany
         $this->CompanyManager = new CompanyManager();
         $this->Company = new Company($_POST);
         $this->CompanyManager->UpdateCompany($this->Company);
-        echo'test';
-        /*header("Location: TestManageFirm/".$this->Company->IdCompany());*/
+        /*header("Location: FormUpdateCompany/".$this->Company->IdCompany());*/
     }
 }
 

@@ -54,8 +54,9 @@ Class CompanyManager extends Model
                                         StreetName='".$Company->StreetName()."',
                                         StreetNumber='".$Company->StreetNumber()."',
                                         City='".$Company->City()."',
-                                        PostalCode='".$Company->PostalCode()."',
+                                        PostalCode='".$Company->PostalCode()."'
                                         where company.IdCompany=".$Company->IdCompany().";");
+        var_dump($req);
         $req->execute();
     }
 }

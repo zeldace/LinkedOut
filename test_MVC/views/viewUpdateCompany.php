@@ -92,8 +92,7 @@
             <label for="floatingInput">Pilot's trust</label>
             <input type="floatingInput" class="form-control" id="floatingInput" value=<?=$company->PilotTrust()?> name='PilotTrust'>
           </div>
-          <?php var_dump($_GET['url'][0]);?>
-          <input type="hidden" class="form-control" id="floatingInput" value=<?=$_GET['url'][1]?> name='IdCompany'>
+          <input type="hidden" class="form-control" id="floatingInput" value=<?=$company->IdCompany()?> name='IdCompany'>
           <div class="action">
             <div class="add">
             <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
