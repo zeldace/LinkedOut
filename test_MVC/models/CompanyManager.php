@@ -46,7 +46,7 @@ Class CompanyManager extends Model
 
     public function UpdateCompany($Company)
     {
-        $req =$this->GetBdd()->prepare("Update (Company LEFT Join Address on Company.IdCompany=Address.IdAddress) SET 
+        $req =$this->GetBdd()->prepare("Update (Company LEFT Join Address on Company.IdCompany=Address.IdCompany) SET 
                                         Name='".$Company->Name()."',
                                         InternNumber='".$Company->InternNumber()."',
                                         Sector='".$Company->Sector()."',

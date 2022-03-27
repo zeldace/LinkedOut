@@ -84,8 +84,8 @@
               <td><?php echo $company->StreetNumber();?></td>
               <td><?php echo $company->City();?></td>
               <td><?php echo $company->PostalCode();?></td>
-              <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Modify</button></td>
-              <td><!--Delete--><button class="w-100 btn btn-lg btn-primary" type="submit">Delete</button></td>
+              <td><!--Modify--><a href=<?="FormUpdateCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Update</a></td>
+              <td><!--Delete--><button class="w-100 btn btn-lg btn-primary" >Delete</button></td>
               <td><?php echo '</br>';?></td>
             </tr>
             <?php endforeach;?>
