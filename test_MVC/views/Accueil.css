@@ -12,7 +12,7 @@
 .index{
     width: 10%;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #00c9b7;
+    background-color: #007bff;
     padding: 0.5%;
     border: 5px;
     border-radius: 5px;
@@ -29,7 +29,7 @@
 .label{
     width: 10%;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #00c9b7;
+    background-color: #007bff;
     padding: 0.5%;
     border: 5px;
     border-radius: 5px;
@@ -85,8 +85,8 @@
 }
 
 .w-100{
-    background-color: #00c9b7 !important;
-    border-color: #00c9b7 !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
 }
 
 .footer-clean {
@@ -178,7 +178,7 @@
 
 body{
   height: 100vh;
-  background-image: linear-gradient(to right bottom, #ff8500, #ff4e55, #ff2c96, #bd4acf, #1267eb);
+  background-image: linear-gradient(to left top, #ffffff, #d7d4f8, #ababf0, #7585e9, #0062e1);
   background-attachment: fixed;
   background-size: cover;
 }

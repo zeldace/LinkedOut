@@ -38,7 +38,7 @@
                     <a href="menu_admin.html">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="TestManageFirm">Manage Firm</a>
+                    <a href="manageFirm">Manage Firm</a>
                 </div>
                 <div class="manage_offers">
                   <a href="form_offers.html">Manage offers</a>
