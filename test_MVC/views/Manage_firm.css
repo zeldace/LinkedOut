@@ -6,11 +6,20 @@
     display: flex;
     flex-direction: row;
 }
-table, th, td {
-  border: 1px solid black;
+table, td {
+  border: 1px solid white;
   border-collapse: collapse;
-  border-color: white;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
 }
+th{
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
 
 .nav div:not(.icone){
   width: 10%;
@@ -68,6 +77,12 @@ table, th, td {
 .w-100{
     background-color: #00c9b7 !important;
     border-color: #00c9b7 !important;
+}
+
+.boutonadd{
+  width: 25%;
+  margin:auto;
+  
 }
 
 .footer-clean {
