@@ -17,6 +17,9 @@ session_unset();
   <script src="https://kit.fontawesome.com/a03e1e1400.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This website is used to manage the different users of LinkedOut. This is accessible only by the admin">
+  <meta name="theme-color" content="#317EFB"/>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
