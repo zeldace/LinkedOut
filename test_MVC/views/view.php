@@ -30,8 +30,9 @@ class view
         if (file_exists($file))
         {
             if ($data)
+            {
                 extract($data);
-
+            }
             ob_start();
             require($file);?>
             <style>

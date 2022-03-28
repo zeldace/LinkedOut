@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: row;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-color: white;
+}
 
 .nav div:not(.icone){
   width: 10%;

@@ -10,7 +10,7 @@ class ControllerUpdateCompany
         $this->CompanyManager = new CompanyManager();
         $this->Company = new Company($_POST);
         $this->CompanyManager->UpdateCompany($this->Company);
-        header("Location: TestManageFirm");
+        header("Location: ManageFirm");
     }
 }
 

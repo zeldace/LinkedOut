@@ -22,7 +22,7 @@ class ControllerManageFirm
         $companies = $this->_companyManager->getCompanies();
 
         $this->_view = new View('Manage_firm');
-        $this->_view->generate(array('Manage_firm'=>$companies));
+        $this->_view->generate(array('companies'=>$companies));
     }
 
 }

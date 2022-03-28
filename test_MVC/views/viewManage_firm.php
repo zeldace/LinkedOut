@@ -38,7 +38,7 @@
                     <a href="menu_admin.html">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="creation_entreprise.html">Manage Firm</a>
+                    <a href="TestManageFirm">Manage Firm</a>
                 </div>
                 <div class="manage_offers">
                   <a href="form_offers.html">Manage offers</a>
@@ -50,7 +50,7 @@
                   <a href="form_classpr.html">Manage class presidents</a>
                 </div>
                 <div class="manage_student">
-                    <a href="Test Formulaire Etudiant.html">Manage Student</a>
+                    <a href="Student">Manage Student</a>
                 </div>
                            
             </div>
@@ -58,52 +58,41 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-        <form action="ManageFirmRedirect" method="POST">
-          <h1 class="h3 mb-3 fw-normal">Manage firms</h1>
-          <div class="form-floating">
-            <p><label for="floatingInput">Name</label></p>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Name" name='Name'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">Buisness sector</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Buisness sector" name='Sector'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">StreetName</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="StreetName" name='StreetName'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">StreetNumber</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="StreetNumber" name='StreetNumber'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">City</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="City" name='City'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">PostalCode</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="PostalCode" name='PostalCode'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">Number of trainees</label>
-            <input type="text" class="form-control" id="floatingInput" placeholder="Number of trainees" name='InternNumber'>
-          </div>
-          <div class="form-floating">
-            <label for="floatingInput">Pilot's trust</label>
-            <input type="floatingInput" class="form-control" id="floatingInput" placeholder="Pilot's trust" name='PilotTrust'>
-          </div>
-          <select name='select'>
-            <option>Add</option>
-            <option>Modify</option>
-            <option>Delete</option>
-          </select>
-          <div class="action">
-            <div class="add">
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
-            </div>
-          </div>
-        </form>
-      </main>
+    <a href="FormAddCompany" class="w-50 btn btn-lg btn-primary">Add</a>
+      <table>
+        <thead align="left" style="display :table-header-group">
+          <tr>
+            <th>Nom</th>
+            <th>InternNumber</th>
+            <th>Sector</th>
+            <th>PilotTrust</th>
+            <th>StreetName</th>
+            <th>StreetNumber</th>
+            <th>City</th>
+            <th>PostalCode</th>
+            <th colspan="2">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            foreach($companies as $company):?>
+            <tr>
+              <td><?php echo $company->Name();?></td>
+              <td><?php echo $company->InternNumber();?></td>
+              <td><?php echo $company->Sector();?></td>
+              <td><?php echo $company->PilotTrust();?></td>
+              <td><?php echo $company->StreetName();?></td>
+              <td><?php echo $company->StreetNumber();?></td>
+              <td><?php echo $company->City();?></td>
+              <td><?php echo $company->PostalCode();?></td>
+              <td><!--Modify--><a href=<?="FormUpdateCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Update</a></td>
+              <td><!--Delete--><a href=<?="DeleteCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Delete</a></td>
+              <td><?php echo '</br>';?></td>
+            </tr>
+            <?php endforeach;?>
+        </tbody>
+      </table>
+    </main>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
