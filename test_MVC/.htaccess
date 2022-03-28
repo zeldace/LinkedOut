@@ -6,5 +6,5 @@ RewriteRule ^(.*)$ index.php?url=$1
 
 AuthType Basic
 AuthName "Restricted Content"
-AuthUserFile C:\www\data\LinkedOut\test_MVC\.htpasswd
+AuthUserFile C:\www\projet_web\projet_web\LinkedOut\test_MVC\.htpasswd
 Require valid-user
