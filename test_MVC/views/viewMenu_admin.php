@@ -18,6 +18,13 @@ if ($_SESSION['status']!='admin')
       <script src="https://kit.fontawesome.com/a03e1e1400.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="This website is used to manage the different users of LinkedOut. This is accessible only by the admin">
+      <meta name="theme-color" content="#317EFB"/>
+      <link rel="icon" type="image" href="favicon.png">
+      <link rel="manifest" href="manifest.json">
+      <link rel="serviceWorker" href="ServiceWorker.js">
+      <link rel="apple-touch-icon" href="https://cdn.glitch.com/49d34dc6-8fbd-46bb-8221-b99ffd36f1af%2Ftouchicon-180.png?v=1566411949736%22%3E">
       <style>
         .bd-placeholder-img {
           font-size: 1.125rem;

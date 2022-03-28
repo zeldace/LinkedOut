@@ -2,7 +2,7 @@
     "name": "Linkedout",
     "short_name": "LinkOut",
     "lang":"fr",
-    "start_url": " Student Account.html",
+    "start_url": "index.php",
     "display": "standalone",
     "background_color": "#8c9af3",
     "theme_color" : "#03a9f4",
