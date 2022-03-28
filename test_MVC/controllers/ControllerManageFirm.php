@@ -24,7 +24,6 @@ class ControllerManageFirm
         $this->_view = new View('Manage_firm');
         $this->_view->generate(array('companies'=>$companies));
     }
-
 }
 
 ?>
