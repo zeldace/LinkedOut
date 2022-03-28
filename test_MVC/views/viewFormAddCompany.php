@@ -38,7 +38,7 @@
                     <a href="menu_admin.html">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="TestManageFirm">Manage Firm</a>
+                    <a href="creation_entreprise.html">Manage Firm</a>
                 </div>
                 <div class="manage_offers">
                   <a href="form_offers.html">Manage offers</a>
@@ -50,7 +50,7 @@
                   <a href="form_classpr.html">Manage class presidents</a>
                 </div>
                 <div class="manage_student">
-                    <a href="Student">Manage Student</a>
+                    <a href="Test Formulaire Etudiant.html">Manage Student</a>
                 </div>
                            
             </div>
@@ -58,41 +58,48 @@
     </header>
     <!--begin sign on form-->
     <main class="form-signin">
-    <a href="FormAddCompany" class="w-50 btn btn-lg btn-primary">Add</a>
-      <table>
-        <thead align="left" style="display :table-header-group">
-          <tr>
-            <th>Nom</th>
-            <th>InternNumber</th>
-            <th>Sector</th>
-            <th>PilotTrust</th>
-            <th>StreetName</th>
-            <th>StreetNumber</th>
-            <th>City</th>
-            <th>PostalCode</th>
-            <th colspan="2">Edit</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-            foreach($companies as $company):?>
-            <tr>
-              <td><?php echo $company->Name();?></td>
-              <td><?php echo $company->InternNumber();?></td>
-              <td><?php echo $company->Sector();?></td>
-              <td><?php echo $company->PilotTrust();?></td>
-              <td><?php echo $company->StreetName();?></td>
-              <td><?php echo $company->StreetNumber();?></td>
-              <td><?php echo $company->City();?></td>
-              <td><?php echo $company->PostalCode();?></td>
-              <td><!--Modify--><a href=<?="FormUpdateCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Update</a></td>
-              <td><!--Delete--><a href=<?="DeleteCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Delete</a></td>
-              <td><?php echo '</br>';?></td>
-            </tr>
-            <?php endforeach;?>
-        </tbody>
-      </table>
-    </main>
+        <form action="AddCompany" method="POST">
+          <h1 class="h3 mb-3 fw-normal">Manage firms</h1>
+          <div class="form-floating">
+            <p><label for="floatingInput">Name</label></p>
+            <input type="text" class="form-control" id="floatingInput"  name='Name'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Buisness sector</label>
+            <input type="text" class="form-control" id="floatingInput"  name='Sector'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">StreetName</label>
+            <input type="text" class="form-control" id="floatingInput" name='StreetName'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">StreetNumber</label>
+            <input type="text" class="form-control" id="floatingInput" name='StreetNumber'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">City</label>
+            <input type="text" class="form-control" id="floatingInput" name='City'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">PostalCode</label>
+            <input type="text" class="form-control" id="floatingInput" name='PostalCode'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Number of trainees</label>
+            <input type="text" class="form-control" id="floatingInput" name='InternNumber'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Pilot's trust</label>
+            <input type="floatingInput" class="form-control" id="floatingInput" name='PilotTrust'>
+          </div>
+          <input type="hidden" class="form-control" id="floatingInput" name='IdCompany'>
+          <div class="action">
+            <div class="add">
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </main>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
