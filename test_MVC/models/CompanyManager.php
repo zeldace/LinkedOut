@@ -5,7 +5,7 @@ Class CompanyManager extends Model
     public function GetCompanies()
     {
         $var = [];
-        $req = $this->GetBdd()->prepare('SELECT *  FROM Company NATURAL JOIN address using(IdCompany);');
+        $req = $this->GetBdd()->prepare('SELECT *  FROM Company JOIN address using(IdCompany);');
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
