@@ -1,0 +1,56 @@
+{
+    "name": "Linkedout",
+    "short_name": "LinkOut",
+    "lang":"fr",
+    "start_url": " Student Account.html",
+    "display": "standalone",
+    "background_color": "#8c9af3",
+    "theme_color" : "#03a9f4",
+    "orientation": "portrait-primary",
+    "icons": 
+    [
+        {
+        "src": "./out144.png",
+            "type": "image/png",
+            "sizes": "144x144",
+            "purpose": "any maskable"
+        },
+        {
+            "src":"./out512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+
+        },
+        {
+            "src":"./out192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable" 
+        },
+        {
+            "src":"./out144.png",
+            "type": "image/png",
+            "sizes": "144x144",
+            "purpose": "any maskable" 
+        },
+        {
+            "src":"./out128.png",
+            "type": "image/png",
+            "sizes": "128x128",
+            "purpose": "any maskable" 
+        },
+        {
+            "src":"./out96.png",
+            "type": "image/png",
+            "sizes": "96x96",
+            "purpose": "any maskable" 
+        },
+        {
+            "src":"./out_ccexpress.png",
+            "type": "image/png",
+            "sizes": "152x152",
+            "purpose": "any maskable" 
+        }
+    ]
+}
