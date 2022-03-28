@@ -57,7 +57,9 @@
         </nav>
     </header>
     <!--begin sign on form-->
-    <main class="form-signin">
+    <div class="boutonadd">
+      <a href="FormAddStudent" class="w-100 btn btn-lg btn-primary add">Add</a>
+    </div>
       <table>
         <thead align="left" style="display :table-header-group">
           <tr>
@@ -86,7 +88,6 @@
               <td><?php echo $student->PostalCode();?></td>
               <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Modify</button></td>
               <td><!--Delete--><button class="w-100 btn btn-lg btn-primary" type="submit">Delete</button></td>
-              <td><?php echo '</br>';?></td>
             </tr>
             <?php endforeach;?>
         </tbody>

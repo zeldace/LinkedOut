@@ -57,20 +57,21 @@
         </nav>
     </header>
     <!--begin sign on form-->
-    <main class="form-signin">
-    <a href="FormAddCompany" class="w-50 btn btn-lg btn-primary">Add</a>
+    <div class="boutonadd">
+      <a href="FormAddCompany" class="w-100 btn btn-lg btn-primary add">Add</a>
+    </div>
       <table>
         <thead align="left" style="display :table-header-group">
           <tr>
-            <th>Nom</th>
-            <th>InternNumber</th>
-            <th>Sector</th>
-            <th>PilotTrust</th>
-            <th>StreetName</th>
-            <th>StreetNumber</th>
-            <th>City</th>
-            <th>PostalCode</th>
-            <th colspan="2">Edit</th>
+            <th scope="col">Nom</th>
+            <th scope="col">InternNumber </th>
+            <th scope="col">Sector </th>
+            <th scope="col">PilotTrust </th>
+            <th scope="col">StreetName </th>
+            <th scope="col">StreetNumber </th>
+            <th scope="col">City </th>
+            <th scope="col">PostalCode </th>
+            <th scope="col" colspan="2">Edit</th>
           </tr>
         </thead>
         <tbody>
@@ -87,12 +88,12 @@
               <td><?php echo $company->PostalCode();?></td>
               <td><!--Modify--><a href=<?="FormUpdateCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Update</a></td>
               <td><!--Delete--><a href=<?="DeleteCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Delete</a></td>
-              <td><?php echo '</br>';?></td>
+              
             </tr>
             <?php endforeach;?>
         </tbody>
       </table>
-    </main>
+    
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
