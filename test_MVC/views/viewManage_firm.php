@@ -49,8 +49,8 @@
                 <div class="manage_president">
                   <a href="form_classpr.html">Manage class presidents</a>
                 </div>
-                <div class="manage_student">
-                    <a href="Student">Manage Student</a>
+                <div class="manageStudent">
+                    <a href="ManageStudent">Manage Student</a>
                 </div>
                            
             </div>
