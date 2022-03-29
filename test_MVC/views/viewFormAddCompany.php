@@ -62,38 +62,38 @@
           <h1 class="h3 mb-3 fw-normal">Manage firms</h1>
           <div class="form-floating">
             <p><label for="floatingInput">Name</label></p>
-            <input type="text" class="form-control" id="floatingInput"  name='Name'>
+            <input type="text" class="form-control" id="floatingInput"  name='Name' required>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Buisness sector</label>
-            <input type="text" class="form-control" id="floatingInput"  name='Sector'>
+            <input type="text" class="form-control" id="floatingInput"  name='Sector' required>
           </div>
           <div class="form-floating">
             <label for="floatingInput">StreetName</label>
-            <input type="text" class="form-control" id="floatingInput" name='StreetName'>
+            <input type="text" class="form-control" id="floatingInput" name='StreetName' required>
           </div>
           <div class="form-floating">
             <label for="floatingInput">StreetNumber</label>
-            <input type="number" class="form-control" id="floatingInput" name='StreetNumber'>
+            <input type="number" class="form-control" id="floatingInput" name='StreetNumber' required>
           </div>
           <div class="form-floating">
             <label for="floatingInput">City</label>
-            <input type="text" class="form-control" id="floatingInput" name='City'>
+            <input type="text" class="form-control" id="floatingInput" name='City' required>
           </div>
           <div class="form-floating">
             <label for="floatingInput">PostalCode</label>
-            <input type="number" class="form-control" id="floatingInput" name='PostalCode'>
+            <input type="number" class="form-control" id="floatingInput" name='PostalCode' required>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Number of trainees</label>
-            <input type="number" class="form-control" id="floatingInput" name='InternNumber'>
+            <input type="number" class="form-control" id="floatingInput" name='InternNumber'required >
           </div>
           <div class="form-floating">
             <label for="floatingInput">Pilot's trust</label>
-            <input type="number" class="form-control" id="floatingInput" name='PilotTrust'>
+            <input type="number" class="form-control" id="floatingInput" name='PilotTrust'required >
           </div>
             <label for="floatingInput">Email</label>
-            <input type="email" class="form-control" id="floatingInput" name='Email'>
+            <input type="email" class="form-control" id="floatingInput" name='Email'required>
           <div class="action">
             <div class="add">
             <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>

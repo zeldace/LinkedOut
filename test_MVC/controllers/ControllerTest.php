@@ -4,6 +4,6 @@ class ControllerTest
 {
     public function __construct()
     {
-        echo crypt('admin')."</br>";
+        echo crypt('1234')."</br>";
     }
 }

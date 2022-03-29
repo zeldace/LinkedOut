@@ -21,7 +21,7 @@ class ControllerSeeDetails
         $this->OfferManager = new OfferManager();
         $Offer = $this->OfferManager->getOffer($url[1]);
 
-        $this->View = new View('SeeDetails');
+        $this->View = new View('Detail');
         $this->View->generate(array('Offer'=>$Offer));
     }
 

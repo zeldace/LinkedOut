@@ -60,37 +60,45 @@
             <th scope="row">Promotion</th>
             <th scope="row">Sector</th>
             <th scope="row">Skill</th>
-            <th colspan="2"></th>
+            <th scope="row">Street Name</th>
+            <th scope="row">StreetNumber</th>
+            <th scope="row">City</th>
+            <th scope="row">Postal Code</th>
+            <th scope="row">PilotTrust</th>
           </tr>
         </thead>
         <tbody>
+          <?php foreach($Offer as $offer):?>
             <tr>
-              <td><?php echo $Offer->Name();?></td>
+              <td><?= $offer->Name();?></td>
+            
+              <td><?= $offer->Duration();?></td>
+            
+              <td><?= $offer->Compensation();?></td>
+            
+              <td><?= $offer->DateOffer();?></td>
+            
+              <td><?= $offer->NumberPlace();?></td>
+            
+              <td><?= $offer->OfferName();?></td>
+            
+              <td><?= $offer->Promotion();?></td>
+            
+              <td><?= $offer->Sector();?></td>
+             
+              <td><?= $offer->Skill();?></td>
+
+              <td><?= $offer->StreetName();?></td>
+
+              <td><?= $offer->StreetNumber();?></td>
+
+              <td><?= $offer->City();?></td>
+
+              <td><?= $offer->PostalCode();?></td>
+
+              <td><?= $offer->PilotTrust();?></td>
             </tr>
-            <tr>
-              <td><?php echo $Offer->Duration();?></td>
-            </tr>
-            <tr>
-              <td><?php echo $Offer->Compensation();?></td>
-            </tr>
-            <tr>
-              <td><?php echo $Offer->DateOffer();?></td>
-            </tr>
-            <tr>
-              <td><?php echo $Offer->NumberPlace();?></td>
-            </tr>
-            <tr>
-              <td><?php echo $Offer->OfferName();?></td>
-            </tr>
-            <tr>
-              <td><?php echo $Offer->Promotion();?></td>
-            </tr>
-            <tr>
-              <td><?php echo $Offer->Sector();?></td>
-            </tr>
-            <tr> 
-              <td><?php echo $Offer->Skill();?></td>
-            </tr>
+            <?php endforeach;?>
         </tbody>
       </table>
       <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Apply</button></td>
