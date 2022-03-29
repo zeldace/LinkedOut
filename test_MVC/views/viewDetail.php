@@ -3,7 +3,7 @@
    <head> 
       <meta charset="utf-8"> 
       <title>LinkedOut</title>
-      <link rel="stylesheet" href="creation_entreprise.css">
+      <link rel="stylesheet" href="TestManage_firm.css">
       <link rel="icon" type="image" href="favicon.png">
       <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
@@ -35,67 +35,66 @@
                 <i class="fa-solid fa-business-time"></i>
                 </div>
                 <div class="label">
-                    <a href="menuAdmin">Menu</a>
+                    <a href="menu_admin.html">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="ManageFirm">Manage Firm</a>
+                    <a href="manageFirm">Search offers</a>
                 </div>
                 <div class="manage_offers">
-                  <a href="form_offers.html">Manage offers</a>
-                </div>
-                <div class="manage_tutors">
-                  <a href="form_tutors.html">Manage tutors</a>
-                </div>
-                <div class="manage_president">
-                  <a href="form_classpr.html">Manage class presidents</a>
-                </div>
-                <div class="manageStudent">
-                    <a href="ManageStudent">Manage Student</a>
+                  <a href="form_offers.html">My applications</a>
                 </div>
                            
             </div>
         </nav>
     </header>
     <!--begin sign on form-->
-    <div class="boutonadd">
-      <a href="FormAddCompany" class="w-100 btn btn-lg btn-primary add">Add</a>
-    </div>
       <table>
         <thead align="left" style="display :table-header-group">
           <tr>
-            <th scope="col">Nom</th>
-            <th scope="col">InternNumber </th>
-            <th scope="col">Sector </th>
-            <th scope="col">PilotTrust </th>
-            <th scope="col">Email </th>
-            <th scope="col">StreetName </th>
-            <th scope="col">StreetNumber </th>
-            <th scope="col">City </th>
-            <th scope="col">PostalCode </th>
-            <th scope="col" colspan="2">Edit</th>
+            <th scope="row">Name Company</th>
+            <th scope="row">Duration</th>
+            <th scope="row">Compensation</th>
+            <th scope="row">DateOffer</th>
+            <th scope="row">NumberPlace</th>
+            <th scope="row">OfferName</th>
+            <th scope="row">Promotion</th>
+            <th scope="row">Sector</th>
+            <th scope="row">Skill</th>
+            <th colspan="2"></th>
           </tr>
         </thead>
         <tbody>
-          <?php
-            foreach($companies as $company):?>
             <tr>
-              <td><?php echo $company->Name();?></td>
-              <td><?php echo $company->InternNumber();?></td>
-              <td><?php echo $company->Sector();?></td>
-              <td><?php echo $company->PilotTrust();?></td>
-              <td><?php echo $company->Email();?></td>
-              <td><?php echo $company->StreetName();?></td>
-              <td><?php echo $company->StreetNumber();?></td>
-              <td><?php echo $company->City();?></td>
-              <td><?php echo $company->PostalCode();?></td>
-              <td><!--Modify--><a href=<?="FormUpdateCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Update</a></td>
-              <td><!--Delete--><a href=<?="DeleteCompany/".$company->IdCompany()?> class="w-100 btn btn-lg btn-primary">Delete</a></td>
-              
+              <td><?php echo $Offer->Name();?></td>
             </tr>
-            <?php endforeach;?>
+            <tr>
+              <td><?php echo $Offer->Duration();?></td>
+            </tr>
+            <tr>
+              <td><?php echo $Offer->Compensation();?></td>
+            </tr>
+            <tr>
+              <td><?php echo $Offer->DateOffer();?></td>
+            </tr>
+            <tr>
+              <td><?php echo $Offer->NumberPlace();?></td>
+            </tr>
+            <tr>
+              <td><?php echo $Offer->OfferName();?></td>
+            </tr>
+            <tr>
+              <td><?php echo $Offer->Promotion();?></td>
+            </tr>
+            <tr>
+              <td><?php echo $Offer->Sector();?></td>
+            </tr>
+            <tr> 
+              <td><?php echo $Offer->Skill();?></td>
+            </tr>
         </tbody>
       </table>
-    
+      <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Apply</button></td>
+    </main>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
