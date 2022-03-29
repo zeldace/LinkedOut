@@ -16,7 +16,7 @@ class ControllerLogin
             session_start();
             $_SESSION['username']=htmlspecialchars($_POST['username']);
             $_SESSION['status']='student';
-            header('Location: student');
+            header('Location: MenuStudent');
         }
         else
         {
