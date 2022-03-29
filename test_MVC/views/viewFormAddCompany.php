@@ -1,3 +1,11 @@
+<?php
+Session_start();
+if ($_SESSION['status']!='admin')
+{
+  header('Location: unconnected');
+}
+?>
+
 <!doctype html> 
 <html lang="en"> 
    <head> 

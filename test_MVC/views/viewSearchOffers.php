@@ -1,3 +1,11 @@
+<?php
+Session_start();
+if ($_SESSION['status']!='student')
+{
+  header('Location: unconnected');
+}
+?>
+
 <!doctype html> 
 <html lang="en"> 
    <head> 
@@ -35,7 +43,7 @@
                 <i class="fa-solid fa-business-time"></i>
                 </div>
                 <div class="label">
-                    <a href="menu_admin.html">Menu</a>
+                    <a href="MenuStudent">Menu</a>
                 </div>
                 <div class="manage_firm">
                     <a href="manageFirm">Search offers</a>
