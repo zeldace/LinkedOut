@@ -75,7 +75,7 @@ if ($_SESSION['status']!='admin')
                 <a href="manage_president" class="w-100 btn btn-lg btn-primary">Manage Class Presidents</a>
               </div>
               <div class="manage_student">
-                <a href="manage_student" class="w-100 btn btn-lg btn-primary" >Manage Student</a>
+                <a href="manageStudent" class="w-100 btn btn-lg btn-primary" >Manage Student</a>
               </div> 
               </div>
             </div>

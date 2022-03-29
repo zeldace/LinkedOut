@@ -5,7 +5,7 @@ Class CompanyManager extends Model
     public function GetCompanies()
     {
         $var = [];
-        $req = $this->GetBdd()->prepare('SELECT *  FROM Company NATURAL JOIN address;');
+        $req = $this->GetBdd()->prepare('SELECT *  FROM Company JOIN address using(IdCompany);');
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
@@ -18,11 +18,12 @@ Class CompanyManager extends Model
 
     public function AddCompany($Company)
     {
-        $req = $this->GetBdd()->prepare("INSERT INTO Company (Name, InternNumber, Sector, PilotTrust)
+        $req = $this->GetBdd()->prepare("INSERT INTO Company (Name, InternNumber, Sector, PilotTrust, Email)
         VALUES ('".$Company->Name()."',
                 ".$Company->InternNumber().",
                 '".$Company->Sector()."',
-                ".$Company->PilotTrust().");");
+                ".$Company->PilotTrust().",
+                '".$Company->Email()."');");
         $req->execute();
 
         $req = $this->GetBdd()->prepare("INSERT INTO Address ( StreetName, StreetNumber, PostalCode, City, IdCompany)
@@ -54,7 +55,8 @@ Class CompanyManager extends Model
                                         StreetName='".$Company->StreetName()."',
                                         StreetNumber='".$Company->StreetNumber()."',
                                         City='".$Company->City()."',
-                                        PostalCode='".$Company->PostalCode()."'
+                                        PostalCode='".$Company->PostalCode()."',
+                                        Email='".$Company->Email()."'
                                         where company.IdCompany=".$Company->IdCompany().";");
         var_dump($req);
         $req->execute();
@@ -69,4 +71,3 @@ Class CompanyManager extends Model
         $req->closeCursor();
     }
 }
-

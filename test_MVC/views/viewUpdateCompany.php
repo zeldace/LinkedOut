@@ -35,10 +35,10 @@
                 <i class="fa-solid fa-business-time"></i>
                 </div>
                 <div class="label">
-                    <a href="menu_admin.html">Menu</a>
+                    <a href="menuAdmin">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="creation_entreprise.html">Manage Firm</a>
+                    <a href="ManageFirm">Manage Firm</a>
                 </div>
                 <div class="manage_offers">
                   <a href="form_offers.html">Manage offers</a>
@@ -74,7 +74,7 @@
           </div>
           <div class="form-floating">
             <label for="floatingInput">StreetNumber</label>
-            <input type="text" class="form-control" id="floatingInput" value=<?=$company->StreetNumber()?> name='StreetNumber'>
+            <input type="number" class="form-control" id="floatingInput" value=<?=$company->StreetNumber()?> name='StreetNumber'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">City</label>
@@ -82,15 +82,19 @@
           </div>
           <div class="form-floating">
             <label for="floatingInput">PostalCode</label>
-            <input type="text" class="form-control" id="floatingInput" value=<?=$company->PostalCode()?> name='PostalCode'>
+            <input type="number" class="form-control" id="floatingInput" value=<?=$company->PostalCode()?> name='PostalCode'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Number of trainees</label>
-            <input type="text" class="form-control" id="floatingInput" value=<?=$company->InternNumber()?> name='InternNumber'>
+            <input type="number" class="form-control" id="floatingInput" value=<?=$company->InternNumber()?> name='InternNumber'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Pilot's trust</label>
-            <input type="floatingInput" class="form-control" id="floatingInput" value=<?=$company->PilotTrust()?> name='PilotTrust'>
+            <input type="number" class="form-control" id="floatingInput" value=<?=$company->PilotTrust()?> name='PilotTrust'>
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Email</label>
+            <input type="email" class="form-control" id="floatingInput" value="<?=$company->Email()?>" name='Email'>
           </div>
           <input type="hidden" class="form-control" id="floatingInput" value=<?=$company->IdCompany()?> name='IdCompany'>
           <div class="action">

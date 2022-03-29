@@ -11,6 +11,7 @@ class company
     private $city;
     private $postalCode;
     private $IdCompany;
+    private $Email;
 
     
     //CONSTRUCTEUR 
@@ -123,5 +124,15 @@ class company
     public function SetIdCompany($IdCompany)
     {
         $this->IdCompany = $IdCompany;
+    }
+
+    public function Email()
+    {
+        return $this->Email;
+    }
+
+    public function SetEmail($Email)
+    {
+        $this->Email = $Email;
     }
 }

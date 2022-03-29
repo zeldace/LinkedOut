@@ -35,10 +35,10 @@
                 <i class="fa-solid fa-business-time"></i>
                 </div>
                 <div class="label">
-                    <a href="menu_admin.html">Menu</a>
+                    <a href="menuAdmin">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="TestManageFirm">Manage Firm</a>
+                    <a href="ManageFirm">Manage Firm</a>
                 </div>
                 <div class="manage_offers">
                   <a href="form_offers.html">Manage offers</a>
@@ -67,6 +67,7 @@
             <th scope="col">InternNumber </th>
             <th scope="col">Sector </th>
             <th scope="col">PilotTrust </th>
+            <th scope="col">Email </th>
             <th scope="col">StreetName </th>
             <th scope="col">StreetNumber </th>
             <th scope="col">City </th>
@@ -82,6 +83,7 @@
               <td><?php echo $company->InternNumber();?></td>
               <td><?php echo $company->Sector();?></td>
               <td><?php echo $company->PilotTrust();?></td>
+              <td><?php echo $company->Email();?></td>
               <td><?php echo $company->StreetName();?></td>
               <td><?php echo $company->StreetNumber();?></td>
               <td><?php echo $company->City();?></td>
