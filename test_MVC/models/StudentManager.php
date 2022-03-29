@@ -52,11 +52,10 @@ Class StudentManager extends Model
                                         VALUES ('".$student->FirstName()."',
                                         '".$student->LastName()."',
                                         '".$student->Login()."',
-                                        '".password_hash($student->Password(), PASSWORD_DEFAULT)."',
+                                        '".password_hash($student->Password(), CRYPT_BLOWFISH)."',
                                         '$IdAddress',
                                         '$IdPromotion',
                                         '".$student->Campus()."');");
-        var_dump($req);
         $req->execute();
     }
 
