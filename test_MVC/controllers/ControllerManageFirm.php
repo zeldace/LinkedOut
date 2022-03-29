@@ -9,7 +9,7 @@ class ControllerManageFirm
 
     public function __construct($url)
     {
-        if(isset($url) && count((is_countable($url)?$url:[])) > 1) //à modifier pour s'adapter à la pagination
+        if(isset($url) && count((is_countable($url)?$url:[])) > 1)
         {
             throw new Exception('Page introuvable');
         }
