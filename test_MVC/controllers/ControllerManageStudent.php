@@ -2,7 +2,7 @@
 
 require_once('views/View.php');
 
-class ControllerStudent
+class ControllerManageStudent
 {
     private $_studentManager;
     private $_view;

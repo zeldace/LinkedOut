@@ -35,10 +35,10 @@
                 <i class="fa-solid fa-business-time"></i>
                 </div>
                 <div class="label">
-                    <a href="menu_admin.html">Menu</a>
+                    <a href="menuAdmin">Menu</a>
                 </div>
                 <div class="manage_firm">
-                    <a href="TestManageFirm">Manage Firm</a>
+                    <a href="ManageFirm">Manage Firm</a>
                 </div>
                 <div class="manage_offers">
                   <a href="form_offers.html">Manage offers</a>
