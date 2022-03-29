@@ -16,6 +16,7 @@ class ControllerLogin
             session_start();
             $_SESSION['username']=htmlspecialchars($_POST['username']);
             $_SESSION['status']='student';
+            $_Session['id']=$this->_login->GetId();
             header('Location: MenuStudent');
         }
         else
@@ -31,7 +32,7 @@ class ControllerLogin
                 $access = $this->_login->Admin();
                 if ($access){
                     session_start();
-                    $_SESSION['username']=$_POST['username'];
+                    $_SESSION['username']=htmlspecialchars($_POST['username']);
                     $_SESSION['status']='admin';
                     header('Location:menuAdmin');
                     

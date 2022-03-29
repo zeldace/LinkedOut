@@ -48,4 +48,16 @@ class LoginManager extends Model
         $hash = implode($var[0]);
         return password_verify($this->Password, $hash);
     }
+
+    public function GetId()
+    {
+        $req = $this->GetBdd()->prepare(
+            "SELECT IdStudent  FROM Student where LoginLogin= '$this->Username';");
+        $req->execute();while($data = $req->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = $data;
+        }
+        $id=implode($var[0]);
+        return $id;
+    }
 }
