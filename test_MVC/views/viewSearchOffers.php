@@ -48,9 +48,6 @@
         </nav>
     </header>
     <!--begin sign on form-->
-    <div class="boutonadd">
-      <a href="FormAddStudent" class="w-100 btn btn-lg btn-primary add">Add</a>
-    </div>
       <table>
         <thead align="left" style="display :table-header-group">
           <tr>
@@ -68,18 +65,18 @@
         </thead>
         <tbody>
           <?php
-            foreach($students as $student):?>
+            foreach($Offers as $offer):?>
             <tr>
-              <td><?php echo $student->FirstName();?></td>
-              <td><?php echo $student->LastName();?></td>
-              <td><?php echo $student->Promotion();?></td>
-              <td><?php echo $student->Subject();?></td>
-              <td><?php echo $student->StreetName();?></td>
-              <td><?php echo $student->StreetNumber();?></td>
-              <td><?php echo $student->City();?></td>
-              <td><?php echo $student->PostalCode();?></td>
-              <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Modify</button></td>
-              <td><!--Delete--><button class="w-100 btn btn-lg btn-primary" type="submit">Delete</button></td>
+              <td><?php echo $offer->Name();?></td>
+              <td><?php echo $offer->Duration();?></td>
+              <td><?php echo $offer->Compensation();?></td>
+              <td><?php echo $offer->DateOffer();?></td>
+              <td><?php echo $offer->NumberPlace();?></td>
+              <td><?php echo $offer->OfferName();?></td>
+              <td><?php echo $offer->Promotion();?></td>
+              <td><?php echo $offer->Sector();?></td>
+              <td><?php echo $offer->Skill();?></td>
+              <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Apply</button></td>
             </tr>
             <?php endforeach;?>
         </tbody>

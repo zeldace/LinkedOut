@@ -20,7 +20,7 @@ class ControllerSearchOffers
     {
         $this->OfferManager = new OfferManager();
         $Offers = $this->OfferManager->getOffers();
-
+        var_dump($Offers);
         $this->View = new View('SearchOffers');
         $this->View->generate(array('Offers'=>$Offers));
     }
