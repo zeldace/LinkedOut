@@ -11,17 +11,17 @@ class ControllerLogin
     {
         $this->_login = new LoginManager(htmlspecialchars($_POST['username']), htmlspecialchars($_POST['password']));
         $access=$this->_login->Student();
-        if ($access[0]>=1)
+        if ($access)
         {
             session_start();
-            $_COOKIE['username']=htmlspecialchars($_POST['username']);
+            $_SESSION['username']=htmlspecialchars($_POST['username']);
             $_SESSION['status']='student';
             header('Location: MenuStudent');
         }
         else
         {
            $access = $this->_login->Pilot();
-           if ($access[0]>=1){
+           if ($access){
             session_start();
             $_SESSION['username']=htmlspecialchars($_POST['username']);
             $_SESSION['status']='pilot';
@@ -29,7 +29,7 @@ class ControllerLogin
            else
            {
                 $access = $this->_login->Admin();
-                if ($access[0]>=1){
+                if ($access){
                     session_start();
                     $_SESSION['username']=$_POST['username'];
                     $_SESSION['status']='admin';
@@ -38,7 +38,7 @@ class ControllerLogin
                 }
                 else
                 {
-                    header('Location: accueil');
+                    //header('Location: accueil');
                 }
             }
         }

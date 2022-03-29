@@ -58,14 +58,11 @@ Class CompanyManager extends Model
                                         PostalCode='".$Company->PostalCode()."',
                                         Email='".$Company->Email()."'
                                         where company.IdCompany=".$Company->IdCompany().";");
-        var_dump($req);
         $req->execute();
     }
 
     public function DeleteCompany($id)
     {
-        $req = $this->GetBdd()->prepare("Delete FROM Address where IdCompany=$id;");
-        $req->execute();
         $req = $this->GetBdd()->prepare("Delete FROM Company where IdCompany=$id;");
         $req->execute();
         $req->closeCursor();
