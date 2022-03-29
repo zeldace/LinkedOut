@@ -1,7 +1,7 @@
 <?php
 class Offer
 {
-    private $IdOffer;
+    public $IdOffer;
     private $Duration;
     private $Compensation;
     private $DateOffer;
@@ -15,9 +15,8 @@ class Offer
     private $InternNumber;
     private $Sector;
     private $PilotTrust;
-    private array $Promotion;
-    private array $Subject;
-    private array $Skill;
+    private $Promotion;
+    private $Skill;
 
     //CONSTRUCTEUR 
     public function __construct(array $data)
@@ -34,7 +33,7 @@ class Offer
             $method = 'Set'.$key;
 
             if (method_exists($this, $method))
-            {
+            { 
                 $this->$method($value);
             }
         }

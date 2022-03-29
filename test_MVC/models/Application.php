@@ -4,8 +4,8 @@ Class Application
 {
     private $IdApplication;
     private $Step;
-    private $IdStudent;
-    private $IdOffer;
+    private $Offer;
+    private $Student;
 
      //CONSTRUCTEUR 
      public function __construct(array $data)
@@ -48,23 +48,23 @@ Class Application
         return $this->Step;
     }
     
-    public function SetIdStudent($IdStudent)
+    public function SetStudent($Student)
     {
-        $this->IdStudent = $IdStudent;
+        $this->Student = $Student;
     }
 
-    public function IdStudent()
+    public function Student()
     {
-        return $this->IdStudent;
+        return $this->Student;
     }
 
-    public function SetIdOffer($IdOffer)
+    public function SetOffer($Offer)
     {
-        $this->IdOffer = $IdOffer;
+        $this->Offer = $Offer;
     }
 
-    public function IdOffer()
+    public function Offer()
     {
-        return $this->IdOffer;
+        return $this->Offer;
     }
 }
