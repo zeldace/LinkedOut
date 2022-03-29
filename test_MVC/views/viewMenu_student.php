@@ -58,7 +58,7 @@ if ($_SESSION['status']!='student')
     
     <div class="action">
       <div class="search">
-        <a href="searchoffers" class="w-100 btn btn-lg btn-primary">Search offers</a>
+        <a href="searchOffers" class="w-100 btn btn-lg btn-primary">Search offers</a>
       </div>
       <div class="applications">
         <a href="application" class="w-100 btn btn-lg btn-primary">My applications</a>
