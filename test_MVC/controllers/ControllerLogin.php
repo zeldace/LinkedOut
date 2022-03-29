@@ -14,7 +14,7 @@ class ControllerLogin
         if ($access[0]>=1)
         {
             session_start();
-            $_SESSION['username']=htmlspecialchars($_POST['username']);
+            $_COOKIE['username']=htmlspecialchars($_POST['username']);
             $_SESSION['status']='student';
             header('Location: MenuStudent');
         }

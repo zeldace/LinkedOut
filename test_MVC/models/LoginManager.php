@@ -9,7 +9,7 @@ class LoginManager extends Model
     public function __construct($username,$password)
     {
         $this->Username =$username;
-        $this->Password =$password;
+        $this->Password =/*password_hash($password, PASSWORD_DEFAULT)*/ $password;
     }
 
     public function Student()

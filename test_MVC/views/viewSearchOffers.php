@@ -67,16 +67,16 @@
           <?php
             foreach($Offers as $offer):?>
             <tr>
-              <td><?php echo $offer->Name();?></td>
-              <td><?php echo $offer->Duration();?></td>
-              <td><?php echo $offer->Compensation();?></td>
-              <td><?php echo $offer->DateOffer();?></td>
-              <td><?php echo $offer->NumberPlace();?></td>
-              <td><?php echo $offer->OfferName();?></td>
-              <td><?php echo $offer->Promotion();?></td>
-              <td><?php echo $offer->Sector();?></td>
-              <td><?php echo $offer->Skill();?></td>
-              <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Apply</button></td>
+              <td><?= $offer->Name();?></td>
+              <td><?= $offer->Duration();?></td>
+              <td><?= $offer->Compensation();?></td>
+              <td><?= $offer->DateOffer();?></td>
+              <td><?= $offer->NumberPlace();?></td>
+              <td><?= $offer->OfferName();?></td>
+              <td><?= $offer->Promotion();?></td>
+              <td><?= $offer->Sector();?></td>
+              <td><?= $offer->Skill();?></td>
+              <td><!--Modify--><a href=<?="SeeDetails/".$offer->IdOffer()?> class="w-100 btn btn-lg btn-primary">See details</a></td>
             </tr>
             <?php endforeach;?>
         </tbody>
