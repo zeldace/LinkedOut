@@ -98,10 +98,11 @@
 
               <td><?= $offer->PilotTrust();?></td>
             </tr>
-            <?php endforeach;?>
+            
         </tbody>
       </table>
-      <td><!--Modify--><button class="w-100 btn btn-lg btn-primary" type="submit">Apply</button></td>
+      <td><!--Apply--><a href=<?="mailto:".$offer->Email()."?subject=Application from LinkedOut" ?> class="w-100 btn btn-lg btn-primary">Apply</a></td>
+      <?php endforeach;?>
     </main>
       <!--begin footer-->
       <div class="footer-clean">

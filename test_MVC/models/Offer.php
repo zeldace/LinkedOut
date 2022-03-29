@@ -17,6 +17,7 @@ class Offer
     private $PilotTrust;
     private $Promotion;
     private $Skill;
+    private $Email;
 
     //CONSTRUCTEUR 
     public function __construct(array $data)
@@ -207,5 +208,15 @@ class Offer
     public function Skill ()
     {
         return $this->Skill;
+    }
+
+    public function Email()
+    {
+        return $this->Email;
+    }
+
+    public function SetEmail($Email)
+    {
+        $this->Email = $Email;
     }
 }

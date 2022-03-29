@@ -43,6 +43,12 @@
                 <div class="manage_offers">
                   <a href="form_offers.html">My applications</a>
                 </div>
+                <div class="nav">
+              <div class="disconnect">
+                  <a href="accueil">Disconnect</a>
+              </div>
+                         
+          </div>
                            
             </div>
         </nav>

@@ -54,6 +54,7 @@ Class OfferManager extends Model
                                                 StreetNumber, 
                                                 City, 
                                                 PostalCode, 
+                                                Email,
                                                 GROUP_CONCAT(distinct Skill) as Skill, 
                                                 group_concat(distinct concat(Promotion), concat(subject)) as Promotion 
                                                 FROM Offer 
