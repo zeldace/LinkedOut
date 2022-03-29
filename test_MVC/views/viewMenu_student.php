@@ -55,22 +55,15 @@ if ($_SESSION['status']!='student')
        Menu
       </h2>
     </div>
-    <main class="form-signin">
-      
-        <form>	    
-          <div class="action">
-            <div class="col1">
-              <div class="manage_firm">
-                <a href="manageFirm" class="w-100 btn btn-lg btn-primary">Search offers</a>
-              </div>
-              <div class="manage_offers">
-                <a href="manage_offers" class="w-100 btn btn-lg btn-primary">My applications</a>
-              </div> 
-            </div>
-              </div>
-            </div>
-        </form>
-      </main>
+    
+    <div class="action">
+      <div class="search">
+        <a href="searchoffers" class="w-100 btn btn-lg btn-primary">Search offers</a>
+      </div>
+      <div class="applications">
+        <a href="application" class="w-100 btn btn-lg btn-primary">My applications</a>
+      </div> 
+    </div>
       <!--begin footer-->
       <div class="footer-clean">
         <footer>
