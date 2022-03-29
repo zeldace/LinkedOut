@@ -74,7 +74,7 @@
           </div>
           <div class="form-floating">
             <label for="floatingInput">StreetNumber</label>
-            <input type="text" class="form-control" id="floatingInput" name='StreetNumber'>
+            <input type="number" class="form-control" id="floatingInput" name='StreetNumber'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">City</label>
@@ -82,17 +82,18 @@
           </div>
           <div class="form-floating">
             <label for="floatingInput">PostalCode</label>
-            <input type="text" class="form-control" id="floatingInput" name='PostalCode'>
+            <input type="number" class="form-control" id="floatingInput" name='PostalCode'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Number of trainees</label>
-            <input type="text" class="form-control" id="floatingInput" name='InternNumber'>
+            <input type="number" class="form-control" id="floatingInput" name='InternNumber'>
           </div>
           <div class="form-floating">
             <label for="floatingInput">Pilot's trust</label>
-            <input type="floatingInput" class="form-control" id="floatingInput" name='PilotTrust'>
+            <input type="number" class="form-control" id="floatingInput" name='PilotTrust'>
           </div>
-          <input type="hidden" class="form-control" id="floatingInput" name='IdCompany'>
+            <label for="floatingInput">Email</label>
+            <input type="email" class="form-control" id="floatingInput" name='Email'>
           <div class="action">
             <div class="add">
             <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>

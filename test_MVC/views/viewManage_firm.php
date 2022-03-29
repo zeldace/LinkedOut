@@ -67,6 +67,7 @@
             <th scope="col">InternNumber </th>
             <th scope="col">Sector </th>
             <th scope="col">PilotTrust </th>
+            <th scope="col">Email </th>
             <th scope="col">StreetName </th>
             <th scope="col">StreetNumber </th>
             <th scope="col">City </th>
@@ -82,6 +83,7 @@
               <td><?php echo $company->InternNumber();?></td>
               <td><?php echo $company->Sector();?></td>
               <td><?php echo $company->PilotTrust();?></td>
+              <td><?php echo $company->Email();?></td>
               <td><?php echo $company->StreetName();?></td>
               <td><?php echo $company->StreetNumber();?></td>
               <td><?php echo $company->City();?></td>
